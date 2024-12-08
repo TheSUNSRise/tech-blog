@@ -47,9 +47,20 @@ Cloudflare Pages 是一个供前端开发人员协作和部署静态 (JAMstack) 
    - 构建输出目录: `dist`
 7. 点击保存并部署按钮。
 
-等待 Cloudflare 构建和部署完成
+等待 Cloudflare 构建和部署完成。
 
-##### H5 For example
+#### 构建失败 问题解决
+
+```sh title="错误信息" showLineNumbers {5-7}
+14:27:07 [build] 12 page(s) built in 3.02s
+14:27:07 [build] Complete!
+Finished
+Note: No functions dir at /functions found. Skipping.
+Validating asset output directory
+Error: Output directory "dist" not found.
+Failed: build output directory not found.
+```
+
 
 Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur vero esse non molestias eos excepturi, inventore atque cupiditate. Sed voluptatem quas omnis culpa, et odit.
 
