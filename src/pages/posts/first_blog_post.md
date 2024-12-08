@@ -51,7 +51,7 @@ Cloudflare Pages 是一个供前端开发人员协作和部署静态 (JAMstack) 
 
 #### 构建失败 问题解决
 
-```sh title="错误信息" showLineNumbers {5-7}
+```sh title="Cloudflare 错误信息" showLineNumbers {5-7}
 14:27:07 [build] 12 page(s) built in 3.02s
 14:27:07 [build] Complete!
 Finished
@@ -61,110 +61,9 @@ Error: Output directory "dist" not found.
 Failed: build output directory not found.
 ```
 
+找了半天，发现代码打包配置里面有个 vercel 的配置。
 
-Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur vero esse non molestias eos excepturi, inventore atque cupiditate. Sed voluptatem quas omnis culpa, et odit.
-
-###### H6 For example
-
-Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur vero esse non molestias eos excepturi, inventore atque cupiditate. Sed voluptatem quas omnis culpa, et odit.
-
-## Emphasis
-
-Emphasis, aka italics, with _asterisks_ or _underscores_.
-
-Strong emphasis, aka bold, with **asterisks** or **underscores**.
-
-Strikethrough uses two tildes. ~~Scratch this.~~
-
-## Blockquotes
-
-> Blockquotes are very handy in email to emulate reply text.
-> This line is part of the same quote.
-
-Quote break.
-
-> This is a very long line that will still be quoted properly when it wraps. Oh boy let's keep writing to make sure this is long enough to actually wrap for everyone. Oh, you can _put_ **Markdown** into a blockquote.
-
-## Horizontal separator
-
-This is a horizontal separator:
-
----
-
-Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur vero esse non molestias eos excepturi, inventore atque cupiditate. Sed voluptatem quas omnis culpa, et odit.
-
----
-
-## List types
-
-### Ordered list
-
-1. List item 1
-2. List item 2
-   1. Nested list item A
-   2. Nested list item B
-3. List item 3
-
-### Unordered list
-
-- List item
-- List item
-  - Nested list item
-  - Nested list item
-    - Double nested list item
-    - Double nested list item
-- List item
-
-### Mixed list
-
-1. First ordered list item
-2. Another item
-   - Unordered sub-list.
-3. Actual numbers don't matter, just that it's a number
-   1. Ordered sub-list
-4. And another item.
-
-## Links
-
-[Inline-style link](https://www.google.com)
-
-[Inline-style link with title](https://www.google.com "Google's Homepage")
-
-[Reference-style link][arbitrary case-insensitive reference text]
-
-[You can use numbers for reference-style link definitions][1]
-
-Or leave it empty and use the [link text itself].
-
-Some text to show that the reference links can follow later.
-
-[arbitrary case-insensitive reference text]: https://www.mozilla.org
-[1]: http://slashdot.org
-[link text itself]: http://www.reddit.com
-
-## Images
-
-Images included in _\_posts_ folder are lazy loaded.
-
-Inline-style:
-![alt text](/src/images/random.jpeg "Logo Title Text 1")
-
-## Table
-
-| Tables        |      Are      | Cool |
-| ------------- | :-----------: | ---: |
-| col 3 is      | right-aligned | 1600 |
-| col 2 is      |   centered    |   12 |
-| zebra stripes |   are neat    |    1 |
-
-| Markdown | Less      | Pretty     |
-| -------- | --------- | ---------- |
-| _Still_  | `renders` | **nicely** |
-| 1        | 2         | 3          |
-
-## Syntax highlight
-
-```ts title="astro.config.mjs" showLineNumbers {1-2,5-6}
+```ts title="astro.config.mjs" showLineNumbers {2,5-10}
 import { defineConfig } from "astro/config";
 import vercelStatic from "@astrojs/vercel/static";
 
@@ -178,14 +77,24 @@ export default defineConfig({
 });
 ```
 
-Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur vero esse non molestias eos excepturi, inventore atque cupiditate. Sed voluptatem quas omnis culpa, et odit.
-Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur vero esse non molestias eos excepturi, inventore atque cupiditate. Sed voluptatem quas omnis culpa, et odit.
-Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur vero esse non molestias eos excepturi, inventore atque cupiditate. Sed voluptatem quas omnis culpa, et odit.
+应该是作者用的 vercel 部署，我这里不需要这些配置，所以删除重新部署就好了。
 
-```python showLineNumbers
-s = "Python syntax highlighting"
-print s
-```
+部署完成:
+![部署完成](/src/images/Cloudflare.png "部署完成")
+
+#### 自定义域名
+
+如果你有域名托管在 Cloudflare 上面，那自定义域名就比较简单了。
+
+1. 在 Workers 和 Pages 中找到刚刚部署完成的应用程序。
+2. 在详情页面中，选择 自定义域 标签页，接着点击 设置自定义域 选项。
+3. 填入已经在 Cloudflare 中托管的域名，点击继续。
+  ![自定义域1](/src/images/zdyy1.png "自定义域1")
+4. 确认 DNS 记录值，点击 激活域 。Cloudflare 会帮我们自动解析 DNS.
+  ![自定义域2](/src/images/zdyy2.png "自定义域2")
+5. 添加成功，显示正在验证。
+  ![自定义域3](/src/images/zdyy3.png "自定义域3")
+6. 等待几分钟，访问域名就好了。
 
 [Rin]: https://github.com/openRin/Rin
 [memos]: https://github.com/usememos/memos
