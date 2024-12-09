@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://002000.best/sitemap-index.xml
+Sitemap: https://s.002000.best/sitemap-index.xml
