@@ -90,11 +90,11 @@ export default defineConfig({
 2. 在详情页面中，选择 自定义域 标签页，接着点击 设置自定义域 选项。
 3. 填入已经在 Cloudflare 中托管的域名，点击继续。
   ![自定义域1](/src/images/zdyy1.png "自定义域1")
-1. 确认 DNS 记录值，点击 激活域 。Cloudflare 会帮我们自动解析 DNS.
+4. 确认 DNS 记录值，点击 激活域 。Cloudflare 会帮我们自动解析 DNS.
   ![自定义域2](/src/images/zdyy2.png "自定义域2")
-1. 添加成功，显示正在验证。
+5. 添加成功，显示正在验证。
   ![自定义域3](/src/images/zdyy3.png "自定义域3")
-1. 等待几分钟，访问域名就好了。
+6. 等待几分钟，访问域名就好了。
 
 [Rin]: https://github.com/openRin/Rin
 [memos]: https://github.com/usememos/memos
