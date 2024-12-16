@@ -80,7 +80,7 @@ export default defineConfig({
 应该是作者用的 vercel 部署，我这里不需要这些配置，所以删除重新部署就好了。
 
 部署完成:
-![部署完成](/public/images/Cloudflare.png "部署完成")
+![部署完成](/src/images/Cloudflare.png "部署完成")
 
 #### 自定义域名
 
@@ -89,12 +89,12 @@ export default defineConfig({
 1. 在 Workers 和 Pages 中找到刚刚部署完成的应用程序。
 2. 在详情页面中，选择 自定义域 标签页，接着点击 设置自定义域 选项。
 3. 填入已经在 Cloudflare 中托管的域名，点击继续。
-  ![自定义域1](/public/images/zdyy1.png "自定义域1")
-4. 确认 DNS 记录值，点击 激活域 。Cloudflare 会帮我们自动解析 DNS.
-  ![自定义域2](/public/images/zdyy2.png "自定义域2")
-5. 添加成功，显示正在验证。
-  ![自定义域3](/public/images/zdyy3.png "自定义域3")
-6. 等待几分钟，访问域名就好了。
+  ![自定义域1](/src/images/zdyy1.png "自定义域1")
+1. 确认 DNS 记录值，点击 激活域 。Cloudflare 会帮我们自动解析 DNS.
+  ![自定义域2](/src/images/zdyy2.png "自定义域2")
+1. 添加成功，显示正在验证。
+  ![自定义域3](/src/images/zdyy3.png "自定义域3")
+1. 等待几分钟，访问域名就好了。
 
 [Rin]: https://github.com/openRin/Rin
 [memos]: https://github.com/usememos/memos
